@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+       <class name="ubticket.Usuari" table="USUARI">
+        <id name="dni" column="DNI">
+            <generator class="identity" />
+            
+        </id>
+        <property name="nom" column="NOM" />
+        <property name="direccio" column="DIRECCIO" />
+        <property name="municipi" column="MUNICIPI" />
+        
+        <property name="provincia" column="PROVINCIA" />
+        <property name="telefon" column="TELEFON" />
+        
+        <property name="login" column="LOGIN" />
+        <property name="password" column="PASSWORD" />
+        
+        <property name="data_alta" column="DATA_ALTA" />
+        <property name="data_darrera_compra" column="DATA_DARRERA_COMPRA" />
+        
+        <!-- 1-N    Usuari - Entrada --> 
+        <set cascade="all" lazy="true" name="entrades" table="entrada">
+           <key>
+               <column name="ID_USUARI" /> 
+           </key>
+            <one-to-many class="ubticket.Entrada" /> 
+        </set>
+       
+        
+     </class>
+  
+
+</hibernate-mapping>

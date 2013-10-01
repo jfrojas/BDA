@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    
+     <class name="ubticket.Categoria" table="CATEGORIA">
+        <id name="id_categoria" column="ID_CATEGORIA">
+            <generator class="identity" />
+        </id>
+        <property name="nom" column="NOM" />        
+        
+         
+        <!-- 1-N    Categoria-Espectacle -->
+        <set cascade="all" lazy="true" name="espectacles" table="espectacle">
+           <key>
+               <column name="ID_CATEGORIA" /> 
+           </key>
+            <one-to-many class="ubticket.Espectacle" /> 
+       </set>
+       
+       
+        
+    </class>
+</hibernate-mapping>

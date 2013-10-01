@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="ubticket.Sessio" table="SESSIO">
+        <id name="id_sessio" column="ID_SESSIO">
+            <generator class="identity" />
+            
+        </id>
+        <property name="data" column="DATA" />
+        <property name="hora" column="HORA" />
+        
+        
+        <!-- 1-N    Sessio - Entrada -->          
+        <set cascade="all" lazy="true" name="entrades" table="entrada">
+           <key>
+               <column name="ID_SESSIO" /> 
+           </key>
+            <one-to-many class="ubticket.Entrada" /> 
+       </set>
+       
+       <!-- N - M organitzacio - sessio  -->
+       <set cascade="all" name="organitzacions" table="ORGANITZACIO_SESSIO">
+           <key column="ID_SESSIO"/>
+           <many-to-many class="ubticket.Organitzacio" column="ID_SESSIO"/>
+       </set>
+      
+        
+       
+    </class>
+
+</hibernate-mapping>
