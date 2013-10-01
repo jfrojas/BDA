@@ -1,7 +1,5 @@
 package ubticket;
 
-import java.util.Set;
-
 /**
  *
  * @author quispe
@@ -9,10 +7,6 @@ import java.util.Set;
 public class Categoria {
     private Integer id_categoria;
     private String nom;
-    
-    //afegim l'objecte Espectacle amb cardinalitat N
-    private Set<Espectacle> espectacles;
-
     
     public Categoria(){
         super();
@@ -39,12 +33,4 @@ public class Categoria {
         this.nom = nom;
     }
     
-    //NOUS GETTERS I SETTERS
-    public Set<Espectacle> getEspectacles() {
-        return espectacles;
-    }
-    public void setEspectacles(Set<Espectacle> espectacles) {
-        this.espectacles = espectacles;
-    }
-
 }

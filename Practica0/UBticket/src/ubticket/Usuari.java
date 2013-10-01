@@ -4,15 +4,13 @@
  */
 package ubticket;
 
-import java.util.Set;
-
 /**
  *
  * @author quispe
  */
 public class Usuari {
     
-    private String dni;
+    private Integer id_usuari;
     private String nom;
     private String direccio;
     private String municipi;
@@ -26,21 +24,16 @@ public class Usuari {
     private String data_alta;
     private String data_darrera_compra;
     
-    //afegim l'objecte Entrada amb cardinalitat N
-    private Set<Entrada> entrades;
-
-    
-
    
     
     public Usuari(){
         super();
     }
     
-    public Usuari(String dni, String nom, String direccio, String municipi, String provincia, Integer telefon, String login, String password, String data_alta, String data_darrera_compra){
+    public Usuari(Integer id_usuari, String nom, String direccio, String municipi, String provincia, Integer telefon, String login, String password, String data_alta, String data_darrera_compra){
         super();
         
-        this.dni = dni;
+        this.id_usuari = id_usuari;
         this.nom = nom;
         this.direccio = direccio;
         this.municipi = municipi;
@@ -55,11 +48,11 @@ public class Usuari {
         this.data_darrera_compra = data_darrera_compra;
     }
     
-    public String getDni(){
-        return dni;        
+    public Integer getIdUsuari(){
+        return id_usuari;        
     }    
-    public void setDni(String dni){
-        this.dni = dni;
+    public void setIdUsuari(Integer id_usuari){
+        this.id_usuari = id_usuari;
     }
     
         
@@ -131,13 +124,5 @@ public class Usuari {
         this.data_darrera_compra = data_darrera_compra;
     }
     
-    //NOUS GETTERS I SETTERS
     
-    public Set<Entrada> getEntrades() {
-        return entrades;
-    }
-
-    public void setEntrades(Set<Entrada> entrades) {
-        this.entrades = entrades;
-    }
 }

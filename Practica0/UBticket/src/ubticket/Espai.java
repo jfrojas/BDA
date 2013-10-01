@@ -4,8 +4,6 @@
  */
 package ubticket;
 
-import java.util.Set;
-
 /**
  *
  * @author quispe
@@ -16,11 +14,6 @@ public class Espai {
     private String nom;
     private String dades_contacte;
     private String ubicacio;
-    
-    //afegim l'objecte Organitzacio amb cardinalitat N
-    private Set<Organitzacio> organitzacions;
-
-    
     public Espai(){
         super();
     }
@@ -65,13 +58,5 @@ public class Espai {
     }
     
     
-    //NOUS GETTERS I SETTERS
-    public Set<Organitzacio> getOrganitzacions() {
-        return organitzacions;
-    }
-    public void setOrganitzacions(Set<Organitzacio> organitzacions) {
-        this.organitzacions = organitzacions;
-    }
-
     
 }

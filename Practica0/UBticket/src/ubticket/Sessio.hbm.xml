@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="ubticket" table="Sessio">
+        <id name="id_sessio" column="ID_SESSIO">
+            <generator class="identity" />
+            
+        </id>
+        <property name="data" column="DATA" />
+        <property name="hora" column="HORA" />
+        
+        
+    </class>
+
+</hibernate-mapping>

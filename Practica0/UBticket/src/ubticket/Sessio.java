@@ -4,8 +4,6 @@
  */
 package ubticket;
 
-import java.util.Set;
-
 /**
  *
  * @author quispe
@@ -16,15 +14,6 @@ public class Sessio {
     private String data;
     private String hora;
     
-    //afegim l'objecte Entrada amb cardinalitat N
-    private Set<Entrada> entrades;
-
-    
-    //afegim l'objecte organitzacio amb cardinalitat N
-    private Set<Organitzacio> organitzacions;
-
-    
-        
     public Sessio(){
         super();
     }
@@ -59,20 +48,5 @@ public class Sessio {
         this.hora = hora;
     }
     
-    //NOUS GETTERS I SETTERS    
-    public Set<Entrada> getEntrades() {
-        return entrades;
-    }
-    public void setEntrades(Set<Entrada> entrades) {
-        this.entrades = entrades;
-    }
-    
-    //NOUS GETTERS I SETTERS
-    public Set<Organitzacio> getOrganitzacions() {
-        return organitzacions;
-    }
-    public void setOrganitzacions(Set<Organitzacio> organitzacions) {
-        this.organitzacions = organitzacions;
-    }
     
 }

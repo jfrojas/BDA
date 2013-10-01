@@ -14,14 +14,9 @@
         
          
         <!-- 1-N    Categoria-Espectacle -->
-        <set cascade="all" lazy="true" name="espectacles" table="espectacle">
-           <key>
-               <column name="ID_CATEGORIA" /> 
-           </key>
-            <one-to-many class="ubticket.Espectacle" /> 
-       </set>
-       
-       
+         <many-to-one class="ubticket.Espectacle" fetch="select" name="espectacle">
+           <column name="ID_ESPECTACLE" /> <!-- CAMP FK de la taula articulo IDENTICS A LES DUES ENTITATS --> 
+        </many-to-one>
         
     </class>
 </hibernate-mapping>

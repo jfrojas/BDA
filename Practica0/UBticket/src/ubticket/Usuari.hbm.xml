@@ -6,8 +6,8 @@
 
 <hibernate-mapping>
 
-       <class name="ubticket.Usuari" table="USUARI">
-        <id name="dni" column="DNI">
+       <class name="ubticket" table="Usuari">
+        <id name="id_usuari" column="ID_USUARI">
             <generator class="identity" />
             
         </id>
@@ -24,14 +24,6 @@
         <property name="data_alta" column="DATA_ALTA" />
         <property name="data_darrera_compra" column="DATA_DARRERA_COMPRA" />
         
-        <!-- 1-N    Usuari - Entrada --> 
-        <set cascade="all" lazy="true" name="entrades" table="entrada">
-           <key>
-               <column name="ID_USUARI" /> 
-           </key>
-            <one-to-many class="ubticket.Entrada" /> 
-        </set>
-       
         
      </class>
   
