@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ubticket;
 
 /**
@@ -10,7 +6,6 @@ package ubticket;
  */
 public class Entrada {
 
-    
     private Integer id_entrada;
     private Integer fila;
     private Integer seient;
@@ -19,22 +14,25 @@ public class Entrada {
     
     // afegim l'objecte Sessio en cardinalitat 1
     private Sessio sessio;
-    
+    private Usuari user;
+            
     /* atributos de la relacion compra */
     private double import_total;
-    private double iva;
+    private Integer iva;
     
     
     public Entrada(){
         super();
     }
     
-    public Entrada(Integer id_entrada, Integer fila, Integer seient, double preu){
+    public Entrada(Integer id_entrada, Integer fila, Integer seient, double preu, Integer iva, double import_total){
         super();
         this.id_entrada = id_entrada;
         this.fila = fila;
         this.seient = seient;
         this.preu = preu;
+        this.import_total = import_total;
+        this.iva = iva;
     }
     
     public Integer getIdEntrada(){
@@ -69,19 +67,21 @@ public class Entrada {
     }
     
     /* metodos de los atributos de la relacion compra*/
-    public double getImportTotal() {
+    public double getImport_total() {
         return import_total;
     }
 
-    public void setImportTotal(double import_total) {
+    public void setImport_total(double import_total) {
         this.import_total = import_total;
     }
 
-    public double getIva() {
+    
+
+    public Integer getIva() {
         return iva;
     }
 
-    public void setIva(double iva) {
+    public void setIva(Integer iva) {
         this.iva = iva;
     }
     
@@ -97,6 +97,15 @@ public class Entrada {
     public void setSessio(Sessio sessio) {
         this.sessio = sessio;
     }
+
+    public Usuari getUser() {
+        return user;
+    }
+
+    public void setUser(Usuari user) {
+        this.user = user;
+    }
+    
     
     
     

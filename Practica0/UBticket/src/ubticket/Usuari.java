@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package ubticket;
 
 import java.util.Set;
@@ -20,18 +16,12 @@ public class Usuari {
     private String provincia;
     private Integer telefon;
     
-    private String login;
-    private String password;
     
     private String data_alta;
     private String data_darrera_compra;
     
     //afegim l'objecte Entrada amb cardinalitat N
     private Set<Entrada> entrades;
-
-    
-
-   
     
     public Usuari(){
         super();
@@ -46,11 +36,7 @@ public class Usuari {
         this.municipi = municipi;
         
         this.provincia = provincia;
-        this.telefon = telefon;
-        
-        this.login = login;
-        this.password = password;
-        
+        this.telefon = telefon;    
         this.data_alta = data_alta;
         this.data_darrera_compra = data_darrera_compra;
     }
@@ -100,20 +86,6 @@ public class Usuari {
     }
     public void setTelefon(Integer telefon){
         this.telefon = telefon;
-    }
-    
-    public String getLogin(){
-        return this.login;
-    }
-    public void setLogin(String login){
-        this.login = login;
-    }
-    
-    public String getPassword(){
-        return this.password;
-    }
-    public void setPassword(String password){
-        this.password = password;
     }
     
     public String getDataAlta(){

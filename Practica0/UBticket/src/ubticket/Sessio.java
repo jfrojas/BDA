@@ -33,6 +33,16 @@ public class Sessio {
         this.hora = hora;                
         this.aforament = aforament;
     }
+
+    public Integer getAforament() {
+        return aforament;
+    }
+
+    public void setAforament(Integer aforament) {
+        this.aforament = aforament;
+    }
+    
+    
     
     public Integer getIdSessio(){
         return this.id_sessio;

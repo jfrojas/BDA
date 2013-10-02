@@ -49,6 +49,6 @@ public class Categoria {
 
     public boolean setEspectacle(Espectacle esp) {
         return espectacles.add(esp);
-        
     }
+    
 }

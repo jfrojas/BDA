@@ -10,18 +10,13 @@
         <id name="id_categoria" column="ID_CATEGORIA">
             <generator class="identity" />
         </id>
-        <property name="nom" column="NOM" />        
-        
-         
+        <property name="nom" column="NOM" />
         <!-- 1-N    Categoria-Espectacle -->
-        <set cascade="all" lazy="true" name="espectacles" table="espectacle">
+        <set cascade="all" lazy="true" name="espectacles" table="ESPECTACLE">
            <key>
-               <column name="ID_CATEGORIA" /> 
+               <column name="ID_CATEGORIA"/> 
            </key>
             <one-to-many class="ubticket.Espectacle" /> 
        </set>
-       
-       
-        
     </class>
 </hibernate-mapping>
