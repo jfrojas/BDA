@@ -6,7 +6,7 @@
 
 <hibernate-mapping>
     
-     <class name="ubticket" table="Entrada">
+     <class name="ubticket.Entrada" table="ENTRADA">
         <id name="id_entrada" column="ID_ENTRADA">
             <generator class="identity" />
             
@@ -15,7 +15,19 @@
         <property name="seient" column="SEIENT" />
         <property name="preu" column="PREU" />
         
+        <property name="import_total" column="IMPORT_TOTAL" />
+        <property name="iva" column="IVA" />
         
+        <!-- N - 1     Entrades - Sessio -->        
+        <many-to-one class="ubticket.Sessio" fetch="select" name="sessio">
+           <column name="ID_SESSIO" /> 
+        </many-to-one>
+       
+        <!-- N - 1     Entrades - Usuari -->        
+        <many-to-one class="ubticket.Usuari" fetch="select" name="usuari">
+           <column name="DNI" /> 
+        </many-to-one>
+       
      </class>
   
 

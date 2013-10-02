@@ -6,7 +6,7 @@
 
 <hibernate-mapping>
 
-    <class name="ubticket" table="Sessio">
+    <class name="ubticket.Sessio" table="SESSIO">
         <id name="id_sessio" column="ID_SESSIO">
             <generator class="identity" />
             
@@ -15,6 +15,22 @@
         <property name="hora" column="HORA" />
         
         
+        <!-- 1-N    Sessio - Entrada -->          
+        <set cascade="all" lazy="true" name="entrades" table="entrada">
+           <key>
+               <column name="ID_SESSIO" /> 
+           </key>
+            <one-to-many class="ubticket.Entrada" /> 
+       </set>
+       
+       <!-- N - M organitzacio - sessio  -->
+       <set cascade="all" name="organitzacions" table="ORGANITZACIO_SESSIO">
+           <key column="ID_SESSIO"/>
+           <many-to-many class="ubticket.Organitzacio" column="ID_SESSIO"/>
+       </set>
+      
+        
+       
     </class>
 
 </hibernate-mapping>

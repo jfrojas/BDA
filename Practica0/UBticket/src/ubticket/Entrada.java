@@ -9,13 +9,21 @@ package ubticket;
  * @author quispe
  */
 public class Entrada {
-    
-    
+
     
     private Integer id_entrada;
     private Integer fila;
     private Integer seient;
     private double preu;
+    
+    
+    // afegim l'objecte Sessio en cardinalitat 1
+    private Sessio sessio;
+    
+    /* atributos de la relacion compra */
+    private double import_total;
+    private double iva;
+    
     
     public Entrada(){
         super();
@@ -60,7 +68,35 @@ public class Entrada {
         this.preu = preu;
     }
     
+    /* metodos de los atributos de la relacion compra*/
+    public double getImportTotal() {
+        return import_total;
+    }
+
+    public void setImportTotal(double import_total) {
+        this.import_total = import_total;
+    }
+
+    public double getIva() {
+        return iva;
+    }
+
+    public void setIva(double iva) {
+        this.iva = iva;
+    }
     
+    
+    
+    
+    //NOUS GETTERS I SETTERS
+    
+    public Sessio getSessio() {
+        return sessio;
+    }
+
+    public void setSessio(Sessio sessio) {
+        this.sessio = sessio;
+    }
     
     
     

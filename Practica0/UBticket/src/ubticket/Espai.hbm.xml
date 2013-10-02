@@ -6,16 +6,21 @@
 
 <hibernate-mapping>
     
-    <class name="ubticket" table="Espai">
+    <class name="ubticket.Espai" table="ESPAI">
         <id name="id_espai" column="ID_ESPAI">
-            <!--<generator class="identity" />-->
-            <generator class="foreign" >
-                <param name="property"> espectacle </param>
+            <generator class="identity" />
         </id>
         <property name="nom" column="NOM" />
         <property name="dades_contacte" column="DADES_CONTACTE" />
         <property name="ubicacio" column="UBICACIO" />
         
+        <!-- 1-N    Espai - Organitzacions -->
+        <set cascade="all" lazy="true" name="organitzacions" table="organitzacio">
+           <key>
+               <column name="ID_ESPAI" /> 
+           </key>
+            <one-to-many class="ubticket.Organitzacio" /> 
+       </set>
         
      </class>
 

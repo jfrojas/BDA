@@ -12,11 +12,12 @@
     <!-- none, update, create -->
     <property name="hibernate.hbm2ddl.auto">create</property>
     <!-- Declaramos los archivos de mapping-->
-    <mapping class="" file="" jar="" package="" resource="ubticket/Categoria.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="ubticket/Espectacle.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="ubticket/Espai.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="ubticket/Sessio.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="ubticket/Entrada.hbm.xml"/>
-    <mapping class="" file="" jar="" package="" resource="ubticket/Usuari.hbm.xml"/>
+    <mapping resource="ubticket/Categoria.hbm.xml"/>
+    <mapping resource="ubticket/Espectacle.hbm.xml"/>
+    <mapping resource="ubticket/Espai.hbm.xml"/>
+    <mapping resource="ubticket/Sessio.hbm.xml"/>
+    <mapping resource="ubticket/Entrada.hbm.xml"/>
+    <mapping resource="ubticket/Usuari.hbm.xml"/>
+    <mapping resource="ubticket/Organitzacio.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

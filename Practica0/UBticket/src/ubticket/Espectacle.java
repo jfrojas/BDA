@@ -4,6 +4,8 @@
  */
 package ubticket;
 
+import java.util.Set;
+
 /**
  *
  * @author quispe
@@ -13,6 +15,15 @@ public class Espectacle {
     private Integer id_espectacle;
     private String titol;
     private String descripcio;
+    
+    // afegim l'objecte categoria en cardinalitat 1
+    private Categoria categoria;
+
+    
+    //afegim l'objecte Organitzacio amb cardinalitat N
+    private Set<Organitzacio> organitzacions;
+
+
     
     public Espectacle(){
         super();
@@ -49,6 +60,21 @@ public class Espectacle {
         this.descripcio = descripcio;
     }
     
+    //NOUS GETTERS I SETTERS    
+    public Categoria getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     
+    //NOUS GETTERS I SETTERS   
+    public Set<Organitzacio> getOrganitzacions() {
+        return organitzacions;
+    }
+    public void setOrganitzacions(Set<Organitzacio> organitzacions) {
+        this.organitzacions = organitzacions;
+    }
     
 }
