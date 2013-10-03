@@ -67,11 +67,11 @@ public class Entrada {
     }
     
     /* metodos de los atributos de la relacion compra*/
-    public double getImport_total() {
+    public double getImportTotal() {
         return import_total;
     }
 
-    public void setImport_total(double import_total) {
+    public void setImportTotal(double import_total) {
         this.import_total = import_total;
     }
 
