@@ -2,7 +2,7 @@ package ubticket;
 
 /**
  *
- * @author quispe
+ * @author quispe, jrojas
  */
 public class Entrada {
 

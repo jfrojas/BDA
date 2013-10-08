@@ -9,7 +9,6 @@
       <class name="ubticket.Espectacle" table="ESPECTACLE">
         <id name="id_espectacle" column="ID_ESPECTACLE">
             <generator class="identity" />
-            <!--<generator class="native" />-->
         </id>
         <property name="titol" column="TITOL" />
         <property name="descripcio" column="DESCRIPCIO" />
@@ -26,9 +25,5 @@
            </key>
             <one-to-many class="ubticket.Organitzacio" /> 
        </set>
-       
-       
      </class>
-  
-
 </hibernate-mapping>

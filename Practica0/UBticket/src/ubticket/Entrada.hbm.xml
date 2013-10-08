@@ -5,7 +5,6 @@
   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    
      <class name="ubticket.Entrada" table="ENTRADA">
         <id name="id_entrada" column="ID_ENTRADA">
             <generator class="identity" />
@@ -27,7 +26,6 @@
         <many-to-one class="ubticket.Usuari" fetch="select" name="usuari">
            <column name="DNI" /> 
         </many-to-one>
-       
      </class>
   
 

@@ -4,7 +4,7 @@ import java.util.Set;
 
 /**
  *
- * @author quispe
+ * @author quispe, jrojas
  */
 public class Usuari {
     
@@ -14,7 +14,7 @@ public class Usuari {
     private String municipi;
         
     private String provincia;
-    private Integer telefon;
+    private String telefon;
     
     
     private String data_alta;
@@ -27,7 +27,7 @@ public class Usuari {
         super();
     }
     
-    public Usuari(String dni, String nom, String direccio, String municipi, String provincia, Integer telefon, String login, String password, String data_alta, String data_darrera_compra){
+    public Usuari(String dni, String nom, String direccio, String municipi, String provincia, String telefon, String data_alta, String data_darrera_compra){
         super();
         
         this.dni = dni;
@@ -81,10 +81,10 @@ public class Usuari {
     }
     
         
-    public Integer getTelefon(){
+    public String getTelefon(){
         return this.telefon;
     }
-    public void setTelefon(Integer telefon){
+    public void setTelefon(String telefon){
         this.telefon = telefon;
     }
     

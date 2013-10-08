@@ -4,7 +4,7 @@ import java.util.Set;
 
 /**
  *
- * @author quispe
+ * @author quispe, jrojas
  */
 public class Categoria {
     private Integer id_categoria;

@@ -15,15 +15,11 @@
         <property name="ubicacio" column="UBICACIO" />
         
         <!-- 1-N    Espai - Organitzacions -->
-        <set cascade="all" lazy="true" name="organitzacions" table="organitzacio">
+        <set cascade="all" lazy="true" name="organitzacions" table="ORGANITZACIO">
            <key>
                <column name="ID_ESPAI" /> 
            </key>
-            <one-to-many class="ubticket.Organitzacio" /> 
+           <one-to-many class="ubticket.Organitzacio" /> 
        </set>
-        
      </class>
-
-  
-
 </hibernate-mapping>

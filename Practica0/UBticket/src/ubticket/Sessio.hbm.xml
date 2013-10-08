@@ -13,6 +13,7 @@
         </id>
         <property name="data" column="DATA" />
         <property name="hora" column="HORA" />
+        <property name="aforament" column="AFORAMENT" />
         
         
         <!-- 1-N    Sessio - Entrada -->          

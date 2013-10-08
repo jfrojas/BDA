@@ -33,12 +33,8 @@
         
        <!-- N - M organitzacio - sessio  -->
        <set cascade="all" name="sessions" table="ORGANITZACIO_SESSIO">
-           <key column="ID_SESSIO"/>
+           <key> <column name="ID_SESSIO" /> </key>
            <many-to-many class="ubticket.Sessio" column="ID_SESSIO"/>
        </set>
-       
-       
      </class>
-  
-
 </hibernate-mapping>
